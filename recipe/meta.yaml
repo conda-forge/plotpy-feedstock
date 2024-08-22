@@ -47,7 +47,7 @@ test:
 about:
   summary: Curve and image plotting tools for Python/Qt applications
   home: https://github.com/PlotPyStack/PlotPy
-  doc_url: https://pythonhosted.org/PlotPy/
+  doc_url: https://plotpy.readthedocs.io/
   license: BSD-3-Clause
   license_file: LICENSE
 

@@ -1,13 +1,13 @@
 {% set name = "plotpy" %}
-{% set version = "2.7.0" %}
+{% set version = "2.7.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/plotpy-{{ version }}.tar.gz
-  sha256: 924745efd9a97cd2f069521005db13009c11963456565240fb74d9e50374e505
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plotpy-{{ version }}.tar.gz
+  sha256: f276d045716ede241f060b7ed3a68a6be2fb79f8e70fb1db7b6f9e595643fb12
 
 build:
   skip: true  # [py>=400 or py2k]

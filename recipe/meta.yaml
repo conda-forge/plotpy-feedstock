@@ -28,10 +28,10 @@ requirements:
     - pip
   run:
     - python
-    - guidata >=3.7
-    - pythonqwt >=0.14
-    - scipy >=1.5
-    - scikit-image >=0.18
+    - guidata >=3.13
+    - pythonqwt >=0.15
+    - scipy >=1.7.3
+    - scikit-image >=0.19
     - pillow
     - tifffile
 

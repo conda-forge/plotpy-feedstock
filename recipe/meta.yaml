@@ -12,7 +12,7 @@ source:
 build:
   skip: true  # [py>=400 or py2k]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -41,8 +41,10 @@ test:
     - plotpy
   commands:
     - pip check
+    - QT_QPA_PLATFORM=offscreen pytest --collect-only --pyargs plotpy.tests
   requires:
     - pip
+    - pytest
 
 about:
   summary: Curve and image plotting tools for Python/Qt applications

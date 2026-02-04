@@ -23,11 +23,12 @@ requirements:
     - python
     - setuptools
     - wheel
-    - numpy
+    - numpy >= 2.0
     - cython >=3.0
     - pip
   run:
     - python
+    - {{ pin_compatible('numpy') }}
     - guidata >=3.13
     - pythonqwt >=0.15
     - scipy >=1.7.3
@@ -41,10 +42,12 @@ test:
     - plotpy
   commands:
     - pip check
-    - QT_QPA_PLATFORM=offscreen pytest --collect-only --pyargs plotpy.tests
+    - set QT_QPA_PLATFORM=offscreen && pytest --collect-only --pyargs plotpy.tests  # [win]
+    - QT_QPA_PLATFORM=offscreen pytest --collect-only --pyargs plotpy.tests  # [not win]
   requires:
     - pip
     - pytest
+    - pytest-xvfb  # [linux]
 
 about:
   summary: Curve and image plotting tools for Python/Qt applications

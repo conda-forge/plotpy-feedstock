@@ -1,5 +1,5 @@
 {% set name = "plotpy" %}
-{% set version = "2.8.3" %}
+{% set version = "2.8.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/plotpy-{{ version }}.tar.gz
-  sha256: e3adfec24758cf74515fb4a2302c7288b6551c77bdcac9784311397b2b8f6c7b
+  sha256: 559a3a60550b1bfbae283056add73ec54b36ef32afed1ab66b95fdeffacddff4
 
 build:
   skip: true  # [py>=400 or py2k]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
@@ -29,7 +29,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - guidata >=3.13
+    - guidata >=3.14.1
     - pythonqwt >=0.15
     - scipy >=1.7.3
     - scikit-image >=0.19

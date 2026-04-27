@@ -14,7 +14,6 @@ source:
 
 build:
   number: 1
-  skip: py>=400 or match(python, ">=2,<3")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -31,7 +30,6 @@ requirements:
     - pip
   run:
     - python
-    - ${{ pin_compatible('numpy') }}
     - guidata >=3.14.1
     - pythonqwt >=0.15
     - scipy >=1.7.3
@@ -47,7 +45,6 @@ tests:
       pip_check: true
   - requirements:
       run:
-        - pip
         - pytest
         - if: linux
           then: pytest-xvfb

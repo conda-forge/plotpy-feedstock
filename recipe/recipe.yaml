@@ -37,7 +37,7 @@ requirements:
   run:
     - python
     - guidata >=3.14.1
-    - pythonqwt >=0.15
+    - pythonqwt >=0.16
     - scipy >=1.7.3
     - scikit-image >=0.19
     - pillow

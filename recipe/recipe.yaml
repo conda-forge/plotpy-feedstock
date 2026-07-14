@@ -13,7 +13,7 @@ source:
   sha256: be14e2e507eb70908e3199544d9f8107a99c30cb5c3961a0ac54269d553ec87b
 
 build:
-  number: 0
+  number: 1
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -42,7 +42,7 @@ requirements:
     - scikit-image >=0.19
     - pillow
     - tifffile
-    - pyqt
+    - qtpy
 
 tests:
   - python:
@@ -52,6 +52,8 @@ tests:
   - requirements:
       run:
         - pytest
+        # Running pytest requires PyQt5, PyQt6 or PySide6 to be installed
+        - pyside6
         - if: linux
           then: pytest-xvfb
     script:

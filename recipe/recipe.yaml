@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: plotpy
-  version: "2.10.0"
+  version: "2.11.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plotpy-${{ version }}.tar.gz
-  sha256: be14e2e507eb70908e3199544d9f8107a99c30cb5c3961a0ac54269d553ec87b
+  sha256: a29729bf6ac8c94a693e5faaf3041bc0ce130a24b54389ee870b13ceec53747b
 
 build:
   number: 0

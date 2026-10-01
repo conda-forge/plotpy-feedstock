@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: plotpy
-  version: "2.11.0"
+  version: "2.11.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/plotpy-${{ version }}.tar.gz
-  sha256: a29729bf6ac8c94a693e5faaf3041bc0ce130a24b54389ee870b13ceec53747b
+  sha256: a4f771ebead97f5b4ac7f879d149aec8982fe0cdd512367212cf93f6d3b0c59f
 
 build:
-  number: 1
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:

@@ -36,8 +36,8 @@ requirements:
     - pip
   run:
     - python
-    - guidata >=3.17.0
-    - pythonqwt >=0.17
+    - guidata >=3.17.1
+    - pythonqwt >=0.17.1
     - scipy >=1.7.3
     - scikit-image >=0.19
     - pillow
